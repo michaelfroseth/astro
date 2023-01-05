@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         "amb-blue": "#030F1D",
         "amb-light": "#051222",
+        "amb-gold": "#FEBE44",
       },
     },
   },
