@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../layouts/Header.astro";
+import Services from "../components/Home/Services.astro";
+---
+
+<Layout title="Ambition Fire | Astro.js & TailwindCSS">
+  <main>
+    <div class="bg-hero-top bg-top bg-cover h-screen">
+      <div class="container mx-auto px-4 py-16">
+        <Header />
+        <section class="flex flex-col text-left mt-8 py-48 gap-4 lg:w-1/2">
+          <h4
+            class="font-light text-left text-aviano-sans text-lg text-sky-300"
+          >
+            Fire protection solutions for All Your Needs
+          </h4>
+          <h1 class="font-semibold text-aviano-sans text-6xl text-white">
+            Fire Protection
+            <br />
+            At Your Fingertips
+          </h1>
+          <p class="text-xl font-light text-gray-300">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+            scelerisque lacinia diam eu eleifend. Phasellus nisi tortor, aliquam
+            nec fringilla a, mattis et lorem. Etiam id mattis sem, vel convallis
+            mauris.
+          </p>
+          <div class="flex flex-row gap-5">
+            <a
+              href="#"
+              class="btn-solid text-aviano-sans lg:w-1/2 p-2 rounded-3xl text-center text-white border-white transition ease-in-out"
+            >
+              Industries We Serve
+            </a>
+            <a
+              href="#"
+              class="btn-outline text-aviano-sans lg:w-1/2 p-2 rounded-3xl text-center text-white border-white transition ease-in-out"
+            >
+              Schedule An Appointment
+            </a>
+          </div>
+        </section>
+        <Services />
+      </div>
+    </div>
+  </main>
+</Layout>
