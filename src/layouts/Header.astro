@@ -1,12 +1,6 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
-let currentPath = pathname;
-
-if (currentPath[currentPath.length - 1] === "/") {
-  currentPath = currentPath.slice(0, -1);
-} else {
-  currentPath = currentPath.slice(1);
-}
+const currentPath = pathname.replace(/\//g, "");
 ---
 
 <div class="flex flex-col lg:flex-row items-center justify-between">
@@ -27,7 +21,7 @@ if (currentPath[currentPath.length - 1] === "/") {
           : "inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"}
         href="/"
       >
-        Home{currentPath}
+        Home
       </a>
       <a
         class={currentPath === "about"
