@@ -1,3 +1,8 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
 <div class="flex flex-col lg:flex-row items-center justify-between">
   <div class="text-white amb-logo">
     <a href="/">
@@ -11,31 +16,41 @@
   <div class="hidden lg:inline-block text-white text-aviano-sans text-xl">
     <nav>
       <a
-        class="inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"
+        class={currentPath === ""
+          ? "inline-block px-4 py-2 font-black text-white hover:text-white border-transparent border-b-4  transition duration-100 ease-in-out"
+          : "inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"}
         href="/"
       >
         Home
       </a>
       <a
-        class="inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"
+        class={currentPath === "about"
+          ? "inline-block px-4 py-2 font-black text-white hover:text-white border-transparent border-b-4  transition duration-100 ease-in-out"
+          : "inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"}
         href="/about"
       >
         About Us
       </a>
       <a
-        class="inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"
+        class={currentPath === "services"
+          ? "inline-block px-4 py-2 font-black text-white hover:text-white border-transparent border-b-4  transition duration-100 ease-in-out"
+          : "inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"}
         href="/services"
       >
         Services
       </a>
       <a
-        class="inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"
+        class={currentPath === "industries"
+          ? "inline-block px-4 py-2 font-black text-white hover:text-white border-transparent border-b-4  transition duration-100 ease-in-out"
+          : "inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"}
         href="/industries"
       >
         Industries
       </a>
       <a
-        class="inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"
+        class={currentPath === "contact"
+          ? "inline-block px-4 py-2 font-black text-white hover:text-white border-transparent border-b-4  transition duration-100 ease-in-out"
+          : "inline-block px-4 py-2 font-bold text-gray-300 hover:text-white border-transparent border-b-4 hover:border-b-4 hover:border-sky-300 transition duration-100 ease-in-out"}
         href="/contact"
       >
         Contact Us
