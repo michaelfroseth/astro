@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../layouts/Header.astro";
 import Services from "../components/Home/Services.astro";
+import Callouts from "../components/Home/Callouts.astro";
 ---
 
 <Layout title="Ambition Fire | Astro.js & TailwindCSS">
@@ -45,57 +46,7 @@ import Services from "../components/Home/Services.astro";
         </section>
         <Services />
       </div>
-      <div class="bg-shield-intro bg-cover h-auto px-5 md:px-0">
-        <div class="container mx-auto text-center px-4 lg:px-0">
-          <section class="py-20">
-            <h1
-              class="font-semibold text-aviano-sans text-4xl md:text-6xl text-white"
-            >
-              Super Soaking
-            </h1>
-            <h1
-              class="font-semibold text-aviano-sans text-4xl md:text-6xl text-sky-300"
-            >
-              Fire Extinguishers
-            </h1>
-            <p
-              class="text-xl font-light text-gray-300 text-center md:w-8/12 items-center m-auto"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              scelerisque lacinia diam eu eleifend. Phasellus nisi tortor,
-              aliquam nec fringilla a, mattis et lorem. Etiam id mattis sem, vel
-              convallis mauris.
-            </p>
-          </section>
-        </div>
-        <div class="container mx-auto">
-          <section class="flex flex-col lg:flex-row items-center">
-            <div class="lg:w-1/2">
-              <img src="../assets/featured-img-1.jpg" />
-            </div>
-            <div class="lg:w-1/2 flex-col flex gap-2">
-              <h3 class="text-sm text-aviano-sans pt-5 text-yellow-500">
-                Protection You Can Count On
-              </h3>
-              <h1
-                class="font-semibold text-aviano-sans text-4xl md:text-6xl text-white"
-              >
-                KEEPING YOUR EVERYTHING SAFE
-              </h1>
-              <p class="text-white text-xl font-light">
-                Duis sit amet venenatis nisl. Nam non rhoncus nisl, et suscipit
-                sem. Vivamus condimentum lectus nec odio imperdiet tristique.
-                Suspendisse nibh arcu, malesuada vel placerat sit amet, suscipit
-                sit amet enim. Ut ac eleifend arcu.
-              </p>
-              <p class="text-white text-xl font-semibold">
-                Morbi iaculis ligula vel est finibus, quis accumsan ligula
-                suscipit.
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
+      <Callouts />
     </div>
   </main>
 </Layout>
