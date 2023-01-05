@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .btn-blue {
     background-color:aqua;
 }
