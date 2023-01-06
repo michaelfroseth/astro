@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-top": "url('/assets/dark-bg.jpg')",
-        "shield-intro": "url('/assets/intro-smoke.png')",
+        "hero-top": "url('/assets/dark-bg.webp')",
+        "shield-intro": "url('/assets/intro-smoke.webp')",
       },
       colors: {
         "amb-blue": "#030F1D",
